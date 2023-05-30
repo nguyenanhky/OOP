@@ -14,14 +14,6 @@ public class EmployeeFullTime extends Employee {
         this.level = level;
     }
 
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
     @Override
     public void payroll() {
         if(level==Config.STAFF){

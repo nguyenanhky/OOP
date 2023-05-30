@@ -1,6 +1,6 @@
 package model;
 
-public class Employee {
+public abstract class Employee {
     protected String name;
     protected long salary;
 
@@ -10,21 +10,8 @@ public class Employee {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public String employeeType(){
-        return "";
-    }
-    public void payroll(){
-
-    }
+    public abstract String employeeType();
+    public abstract void payroll();
 
     public void showInformation(){
         System.out.println("===== Nhân viên: " + name + " =====");

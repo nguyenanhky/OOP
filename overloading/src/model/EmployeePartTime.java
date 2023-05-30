@@ -10,12 +10,14 @@ public class EmployeePartTime extends Employee {
         this.workingHours = workingHours;
     }
 
-    public void payroll(){
-        salary = Config.SALARY_STAFF_WORKING_ONE_HOURS*workingHours;
-    }
-
     @Override
     public String employeeType() {
         return "staff part time ";
     }
+
+    @Override
+    public void payroll() {
+        salary = Config.SALARY_STAFF_WORKING_ONE_HOURS*workingHours;
+    }
+
 }
