@@ -18,15 +18,12 @@ public class Employee {
         this.name = name;
     }
 
-    public long getSalary() {
-        return salary;
-    }
 
-    public void setSalary(long salary) {
-        this.salary = salary;
-    }
     public String employeeType(){
         return "";
+    }
+    public void payroll(){
+
     }
 
     public void showInformation(){
