@@ -5,21 +5,17 @@ import model.EmployeePartTime;
 
 public class MainClass {
     public static void main(String[] args) {
-        EmployeeFullTime employeeFullTime = new EmployeeFullTime("nguyen anh ky");
-        employeeFullTime.setLevel(0);
-        employeeFullTime.calculateSalary();
+        EmployeeFullTime boss = new EmployeeFullTime("nguyen anh ky",3);
+        boss.setLevel(0);
+        boss.payroll();
+        boss.showInformation();
 
-        employeeFullTime.showInformation();
+        EmployeeFullTime staff = new EmployeeFullTime("Nguyen Van Quang");
+        staff.payroll();
+        staff.showInformation();
 
-        EmployeeFullTime employeeFullTime1 = new EmployeeFullTime("Tran Duc Nhan",3);
-        employeeFullTime1.setLevel(0);
-        employeeFullTime1.calculateSalary();
-
-        employeeFullTime1.showInformation();
-
-
-        EmployeePartTime employeePartTime = new EmployeePartTime("Dang Thi Duyen",240);
-        employeePartTime.calculateSalary();
-        employeePartTime.showInformation();
+        EmployeePartTime staffPartTime = new EmployeePartTime("Tran Ngoc Anh",100);
+        staffPartTime.payroll();
+        staff.showInformation();
     }
 }

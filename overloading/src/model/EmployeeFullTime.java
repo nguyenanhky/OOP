@@ -8,22 +8,15 @@ public class EmployeeFullTime extends Employee {
 
     public EmployeeFullTime(String name) {
         super(name);
-        level = Config.EMPLOYEE_REGULAR;
+        level = Config.STAFF;
     }
 
     public EmployeeFullTime(String name,int overtime) {
         super(name);
         this.overtime = overtime;
-        level = Config.EMPLOYEE_REGULAR;
+        level = Config.STAFF;
     }
 
-    public int getOvertime() {
-        return overtime;
-    }
-
-    public void setOvertime(int overtime) {
-        this.overtime = overtime;
-    }
 
     public int getLevel() {
         return level;
@@ -35,14 +28,14 @@ public class EmployeeFullTime extends Employee {
 
     @Override
     public String employeeType() {
-        if(level==Config.EMPLOYEE_REGULAR){
-            return "employee full time"+(overtime>0?"have overtime days":"no overtime days");
+        if(level==Config.STAFF){
+            return "employee full time"+(overtime>0?" have overtime days":"no overtime days");
         }else{
-            return "boss full time "+(overtime>0?"have overtime days":"no overtime days");
+            return "boss full time "+(overtime>0?" have overtime days":"no overtime days");
         }
     }
-    public void calculateSalary(){
-        if(level==Config.EMPLOYEE_REGULAR){
+    public void payroll(){
+        if(level==Config.STAFF){
             salary = Config.SALARY_EMPLOYEE_REGULAR_FULL_TIME+overtime*800000;
         }else{
             salary = Config.SALARY_EMPLOYEE_BOSS_FULL_TIME+overtime*800000;

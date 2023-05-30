@@ -10,7 +10,7 @@ public class EmployeePartTime extends Employee {
         this.workingHours = workingHours;
     }
 
-    public void calculateSalary(){
-        salary = Config.OVERTIME*workingHours;
+    public void payroll(){
+        salary = Config.SALARY_STAFF_WORKING_ONE_HOURS *workingHours;
     }
 }
